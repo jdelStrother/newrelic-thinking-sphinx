@@ -16,6 +16,12 @@ DependencyDetection.defer do
       add_method_tracer :populate
     end
 
+    class ::ThinkingSphinx::BatchedSearch
+      include NewRelic::Agent::MethodTracer
+
+      add_method_tracer :populate
+    end
+
     # #query will show us actual sphinx time vs #populate which includes db fetching
     class ::Riddle::Client
       include NewRelic::Agent::MethodTracer

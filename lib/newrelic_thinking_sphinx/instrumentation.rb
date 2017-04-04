@@ -23,7 +23,7 @@ DependencyDetection.defer do
     end
 
     # #query will show us actual sphinx time vs #populate which includes db fetching
-    class ::Riddle::Client
+    class ::ThinkingSphinx::Connection::Client
       include NewRelic::Agent::MethodTracer
 
       add_method_tracer :query

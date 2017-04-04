@@ -14,7 +14,6 @@ DependencyDetection.defer do
       include NewRelic::Agent::MethodTracer
 
       add_method_tracer :populate
-      add_method_tracer :results
     end
 
     # #query will show us actual sphinx time vs #populate which includes db fetching
